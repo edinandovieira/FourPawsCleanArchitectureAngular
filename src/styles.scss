@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+$primary-color: #F89616;
+$secundary-color: #FDE1BC;
+$tertiary-color: #FEF0DD;
+$quaternary-color: #9E5F0E;
+$quintenary-color: #282B38;
+
+body{
+  margin: 0;
+}
+
+a:-webkit-any-link{
+  text-decoration: none;
+}
+
+.grid {
+  margin: 0;
+}

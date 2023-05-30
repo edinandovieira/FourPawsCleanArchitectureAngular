@@ -1,1 +1,18 @@
-<p>home works!</p>
+<app-headersite></app-headersite>
+<div class="carousel">
+  <p-carousel [value]="publicity" [numVisible]="1" [numScroll]="1" [circular]="true" autoPlayInterval="3000">
+    <ng-template let-image pTemplate="item">
+      <img src={{image}} alt="Slide" height="95%; padding: 20px">
+    </ng-template>
+  </p-carousel>
+</div>
+<div class="text-center categories">
+  <h2>Principais Categorias</h2>
+  <div class="grid">
+    <a class="col-3 category" *ngFor="let category of categories" href="">
+      <img src={{category.icon}} alt="" height="170px"><br>
+      {{category.name}}
+    </a>
+  </div>
+</div>
+<app-footersite></app-footersite>

@@ -1,0 +1,21 @@
+<div class="footer">
+  <div class="grid">
+    <div class="col-2" *ngFor="let list of footerList">
+      {{list.nome}}
+      <ul *ngFor="let item of list.list">
+        <li>
+          <a href={{item.route}}>
+            {{item.nome}}
+          </a>
+        </li>
+      </ul>
+    </div>    
+    <div class="col-2 col-offset-1">
+      <img src={{logo02}} alt="">
+    </div>
+  </div>
+  <p>
+    <i class="pi pi-map-marker"></i>
+    Endereço .....................................................................
+  </p>
+</div>

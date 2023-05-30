@@ -1,0 +1,26 @@
+@import '../../../../../styles.scss';
+
+.categories{
+  background-color: $primary-color;
+  padding: 20px 0px 10px 0px;
+  color: $secundary-color;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.categories h2{
+  margin: 0;
+}
+
+.category{
+  padding-top: 40px;
+  color: $quintenary-color;
+}
+
+.category:hover{
+  transform: scale(1.1);
+}
+
+.carousel{
+  background-color: $tertiary-color;
+  font-family: 'Montserrat', sans-serif;
+}

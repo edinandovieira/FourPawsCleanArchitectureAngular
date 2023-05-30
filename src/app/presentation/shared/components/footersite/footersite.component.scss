@@ -1,0 +1,27 @@
+@import '../../../../../styles.scss';
+
+.footer{
+  background-color: $tertiary-color;
+  padding: 25px 15px 5px 15px;
+  font-family: 'Montserrat', sans-serif;
+  color: $quaternary-color;
+}
+
+.footer ul{
+  padding-left: 10px;
+  list-style-type: none;
+}
+
+.footer ul li{
+  font-size: 12px;
+  padding-left: 10px;
+  padding-bottom: 15px;
+}
+
+.footer ul li a{
+  color: $quaternary-color;
+}
+
+.footer ul li a:hover{
+  color: black;
+}
