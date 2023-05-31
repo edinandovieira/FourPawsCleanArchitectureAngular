@@ -37,6 +37,6 @@ input, .p-inputtext{
   color: $quintenary-color;
 }
 
-.p-input-icon-right > i:last-of-type{
+.p-input-icon-right > i:last-of-type, .p-input-icon-left > i:first-of-type{
   color: $primary-color;
 }

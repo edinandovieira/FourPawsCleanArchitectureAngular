@@ -1,0 +1,31 @@
+<app-headersite></app-headersite>
+<div class="grid">
+  <div class="col-offset-1 col-5 title">
+    <h1><b>Raças</b></h1>
+  </div>
+  <div class="col-offset-3 col-3">
+    <span class="p-input-icon-left">
+      <i class="pi pi-search"></i>
+      <input type="text" pInputText placeholder="Procure uma raça específica" pKeyFilter="alpha"/>
+    </span>
+  </div>
+</div>
+<div class="card">
+  <div class="card-container">
+      <div class="flex">
+          <div class="flex flex-auto border-round bg-blue-500" *ngFor="let breed of breeds">{{breed}}</div>
+      </div>
+  </div>
+</div>
+<div>
+  <div>
+    A
+  </div>
+  <div class="card">
+    <div class="card-container purple-container overflow-hidden">
+      <div class="flex flex-auto border-round bg-blue-500">Akita</div>
+      <div class="flex flex-auto border-round bg-blue-500">American Bully</div>
+    </div>
+  </div>
+</div>
+<app-footersite></app-footersite>

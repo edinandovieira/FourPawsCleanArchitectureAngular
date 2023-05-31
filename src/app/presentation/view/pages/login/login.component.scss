@@ -34,12 +34,24 @@
 }
 
 .login-right-top{
-  padding-top: 50px;
+  padding-top: 35px;
   font-family: 'Montserrat', sans-serif;
   color: $primary-color;
+  font-size: 35px;
 }
 
 .login-right-bottom{
+  padding-top: 30px;
+  padding-bottom: 30px;
   color: $quintenary-color;
   font-family: 'Montserrat', sans-serif;
+}
+
+.login-createacc{
+  background-color: white;
+  color: $bg-send;
+  border: 2px solid $bg-send;
+  border-radius: 7px;
+  font-family: 'Montserrat', sans-serif;
+  padding: 20px
 }
