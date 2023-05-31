@@ -4,9 +4,11 @@ $secundary-color: #FDE1BC;
 $tertiary-color: #FEF0DD;
 $quaternary-color: #9E5F0E;
 $quintenary-color: #282B38;
+$bg-send: #25B456;
 
 body{
   margin: 0;
+  background-color: $tertiary-color;
 }
 
 a:-webkit-any-link{
@@ -15,4 +17,26 @@ a:-webkit-any-link{
 
 .grid {
   margin: 0;
+}
+
+.p-carousel .p-carousel-indicators .p-carousel-indicator.p-highlight button{
+  background-color: $primary-color;
+}
+
+.p-carousel .p-carousel-indicators .p-carousel-indicator button{
+  background-color: $quaternary-color
+}
+
+.p-carousel .p-carousel-content .p-carousel-prev, .p-carousel .p-carousel-content .p-carousel-next{
+  background-color: $primary-color;
+}
+
+input, .p-inputtext{
+  background-color: white;
+  border: 2px solid #E9E9E9;
+  color: $quintenary-color;
+}
+
+.p-input-icon-right > i:last-of-type{
+  color: $primary-color;
 }

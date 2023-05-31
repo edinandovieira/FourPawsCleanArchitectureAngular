@@ -8,10 +8,8 @@ import { Component } from '@angular/core';
 export class HomeComponent {
 
   publicity = [
-    '../../../../../assets/publicity/001.svg',
-    '../../../../../assets/categories/mobiliario.svg',
-    '../../../../../assets/categories/medicine.svg',
-    '../../../../../assets/categories/shopping.svg'
+    '../../../../../assets/publicity/001.png',
+    '../../../../../assets/publicity/002.png'
   ]
 
   categories = [

@@ -1,8 +1,8 @@
 <app-headersite></app-headersite>
 <div class="carousel">
-  <p-carousel [value]="publicity" [numVisible]="1" [numScroll]="1" [circular]="true" autoPlayInterval="3000">
+  <p-carousel [value]="publicity" [numVisible]="1" [numScroll]="1" [circular]="true">
     <ng-template let-image pTemplate="item">
-      <img src={{image}} alt="Slide" height="95%; padding: 20px">
+      <img src={{image}} alt="Slide" class="w-12">
     </ng-template>
   </p-carousel>
 </div>

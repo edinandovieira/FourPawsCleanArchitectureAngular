@@ -29,11 +29,12 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [
-              "src/styles.scss",
+            "styles": [              
               "node_modules/primeicons/primeicons.css",
               "node_modules/primeflex/primeflex.css",
-              "node_modules/primeng/resources/primeng.min.css"
+              "node_modules/primeng/resources/primeng.min.css",
+              "node_modules/primeng/resources/themes/arya-orange/theme.css",
+              "src/styles.scss"
             ],
             "scripts": []
           },

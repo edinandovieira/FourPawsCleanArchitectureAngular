@@ -1,1 +1,27 @@
-<p>login works!</p>
+<app-headersite></app-headersite>
+<div class="grid">
+  <div class="col-offset-1 col-5 title">
+    <h1><b>Acessar ou criar conta</b></h1>
+    <div class="login-form card">
+      <h1>Acessar ou criar conta</h1>
+      <div class="field">
+          <label for="firstname1">E-mail ou CPF/CNPJ</label><br>
+          <input type="text" pInputText class="w-full"/>
+      </div>
+      <div class="field">
+        <label for="password">Senha</label><br>
+        <p-password [toggleMask]="true" styleClass="w-full" inputStyleClass="w-full login-input"></p-password>          
+      </div>
+      <button type="button" class="text-white w-full bg-send">ENTRAR</button>
+    </div>
+  </div>
+  <div class="col-offset-1 col-4">
+    <p class="login-right-top">
+      Criar uma conta é rápido, fácil e gratuito!
+    </p>
+    <p class="login-right-bottom">
+      Com a sua conta da FourPaws você tem acessoa Ofertas exclusivas, descontos, pode criar e gerenciar a sua Assinatura FourPaws, acompanharos seus pedidos e muito mais!
+    </p>
+  </div>
+</div>
+<app-footersite></app-footersite>
