@@ -15,6 +15,10 @@ a:-webkit-any-link{
   text-decoration: none;
 }
 
+::placeholder{
+  color: $quintenary-color;
+}
+
 .grid {
   margin: 0;
 }
@@ -40,3 +44,4 @@ input, .p-inputtext{
 .p-input-icon-right > i:last-of-type, .p-input-icon-left > i:first-of-type{
   color: $primary-color;
 }
+

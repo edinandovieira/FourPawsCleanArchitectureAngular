@@ -14,7 +14,7 @@ export class FootersiteComponent {
       'list': [
         {'nome': 'Quem somos', 'route': ''},
         {'nome': 'Política de Privacidade', 'route': ''},
-        {'nome': 'Guia de Raças - Cachorros', 'route': ''}
+        {'nome': 'Guia de Raças - Cachorros', 'route': '/breed'}
       ]
     },
     {
