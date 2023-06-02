@@ -6,7 +6,6 @@ import { BreedRoutingModule } from './breed-routing.module';
 import { SharedModule } from './../../../shared/shared.module';
 
 import { InputTextModule } from 'primeng/inputtext';
-import { AvatarModule } from 'primeng/avatar';
 
 @NgModule({
   declarations: [
@@ -16,8 +15,7 @@ import { AvatarModule } from 'primeng/avatar';
     CommonModule,
     BreedRoutingModule,
     SharedModule,
-    InputTextModule,
-    AvatarModule
+    InputTextModule
   ]
 })
 export class BreedModule {}
