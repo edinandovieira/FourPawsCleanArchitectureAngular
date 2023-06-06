@@ -1,0 +1,12 @@
+<app-headersys></app-headersys>
+<div class="card card-container" *ngFor="let menu of sysHomeMenu">
+  <h1>{{menu.title}}</h1>
+  <div class="flex card-container">
+    <div class="flex flex-item align-items-center justify-content-center" *ngFor="let navigate of menu.navigate">
+      <a href="sys/{{navigate.route}}">
+        <i class="pi {{navigate.icon}}"></i>
+        <p>{{navigate.title}}</p>
+      </a>
+    </div>
+  </div>
+</div>

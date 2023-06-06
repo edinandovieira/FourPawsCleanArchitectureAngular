@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./headersys.component.scss']
 })
 export class HeadersysComponent {
-
+  public logo01 = "../../../../../assets/logo01.svg";
 }
