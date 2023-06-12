@@ -8,6 +8,8 @@ import { SharedModule } from './../../../shared/shared.module';
 import { PasswordModule } from 'primeng/password';
 import { InputTextModule } from 'primeng/inputtext';
 
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     LoginComponent
@@ -16,8 +18,9 @@ import { InputTextModule } from 'primeng/inputtext';
     CommonModule,
     LoginRoutingModule,
     SharedModule,
-    PasswordModule,
-    InputTextModule
+    InputTextModule,
+    FormsModule,
+    PasswordModule
   ]
 })
 export class LoginModule { }

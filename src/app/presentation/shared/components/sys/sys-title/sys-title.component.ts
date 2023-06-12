@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-sys-title',
@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./sys-title.component.scss']
 })
 export class SysTitleComponent {
+  @Input() title: string;
 
+  constructor(){
+    this.title = 'Favor informar um valor para o title';
+  }
 }

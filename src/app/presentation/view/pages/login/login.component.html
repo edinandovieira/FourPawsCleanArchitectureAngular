@@ -3,16 +3,18 @@
   <div class="col-offset-1 col-5 title">
     <h1><b>Acessar ou criar conta</b></h1>
     <div class="login-form card">
+      <form (ngSubmit)="login()">
       <h1>Acessar ou criar conta</h1>
       <div class="field">
           <label for="firstname1">E-mail ou CPF/CNPJ</label><br>
-          <input type="text" pInputText class="w-full"/>
+          <input type="text" name="username" pInputText class="w-full" [(ngModel)]="username"/>
       </div>
       <div class="field">
         <label for="password">Senha</label><br>
-        <p-password [toggleMask]="true" styleClass="w-full" inputStyleClass="w-full login-input"></p-password>          
+        <p-password name="password" [toggleMask]="true" styleClass="w-full" inputStyleClass="w-full login-input" [(ngModel)]="password"></p-password>          
       </div>
-      <button type="button" class="text-white w-full bg-send">ENTRAR</button>
+      <button type="submit" class="text-white w-full bg-send">ENTRAR</button>
+      </form>
     </div>
   </div>
   <div class="col-offset-1 col-4">

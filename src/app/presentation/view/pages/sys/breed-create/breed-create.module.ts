@@ -6,8 +6,6 @@ import { BreedCreateComponent } from './breed-create.component';
 import { BreedCreateRoutingModule } from './breed-create-routing.module';
 import { SharedModule } from 'src/app/presentation/shared/shared.module';
 
-import { InputTextModule } from 'primeng/inputtext';
-
 @NgModule({
   declarations: [
     BreedCreateComponent
@@ -15,8 +13,7 @@ import { InputTextModule } from 'primeng/inputtext';
   imports: [
     CommonModule,
     BreedCreateRoutingModule,
-    SharedModule,
-    InputTextModule  
+    SharedModule
   ]
 })
 export class BreedCreateModule { }

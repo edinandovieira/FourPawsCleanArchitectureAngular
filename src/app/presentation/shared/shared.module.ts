@@ -6,6 +6,8 @@ import { FootersiteComponent } from './components/footersite/footersite.componen
 import { SysTitleComponent } from './components/sys/sys-title/sys-title.component';
 import { SysFormComponent } from './components/sys/sys-form/sys-form.component';
 
+import { InputTextModule } from 'primeng/inputtext';
+
 @NgModule({
   declarations: [
     HeadersiteComponent,
@@ -15,7 +17,8 @@ import { SysFormComponent } from './components/sys/sys-form/sys-form.component';
     SysFormComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    InputTextModule
   ],
   exports: [
     HeadersiteComponent,

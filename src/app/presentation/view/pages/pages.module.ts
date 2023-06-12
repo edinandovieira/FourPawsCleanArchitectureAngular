@@ -8,6 +8,8 @@ import { HomeSysModule } from './sys/home/home.module';
 import { BreedCreateModule } from './sys/breed-create/breed-create.module';
 import { ProductCreateModule } from './sys/product-create/product-create.module';
 
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [],
   imports: [
@@ -17,7 +19,8 @@ import { ProductCreateModule } from './sys/product-create/product-create.module'
     BreedModule,
     HomeSysModule,
     BreedCreateModule,
-    ProductCreateModule
+    ProductCreateModule,
+    HttpClientModule
   ]
 })
 export class PagesModule { }
