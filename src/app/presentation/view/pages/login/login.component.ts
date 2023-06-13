@@ -1,5 +1,6 @@
 import { AuthService } from './../../../../infra/auth.service';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -10,14 +11,14 @@ export class LoginComponent implements OnInit {
   username: string = "";
   password: string = "";
 
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthService, private router: Router) {}
   ngOnInit() {}
   // initForm(){}
 
   login(){
     this.authService.login(this.username, this.password).subscribe(
       result => {
-        console.log(result);
+        this.router.navigate(['sys/home']);
       }
     )
   }
