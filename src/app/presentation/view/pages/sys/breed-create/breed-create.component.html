@@ -1,3 +1,21 @@
 <app-headersys></app-headersys>
 <app-sys-title title={{title}}></app-sys-title>
-<app-sys-form [form]="form"></app-sys-form>
+<div class="form-sys">
+  <div class="grid">
+    <div class="col-12">
+      <div class="field">
+        <label for="firstname1">Raça</label><br>
+        <input type="text" name="breed" pInputText class="w-full border-round-lg" placeholder="Chow Chow" [(ngModel)]="breed"/>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="field">
+        <label for="firstname1">Thumbnail</label><br>
+        <input type="file" name="breedFile" pInputText class="w-full border-round-lg" placeholder="Nenhum arquivo escolhido" (change)="onFileSelected($event)"/>
+      </div>
+    </div>
+    <div class="col-12">
+      <p-button label="SALVAR" styleClass="text-white w-full bg-send" [loading]="loading" (click)="submitData()"></p-button>
+    </div>
+  </div>
+</div>

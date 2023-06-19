@@ -9,6 +9,7 @@ import { PasswordModule } from 'primeng/password';
 import { InputTextModule } from 'primeng/inputtext';
 
 import { FormsModule } from '@angular/forms';
+import { ButtonModule } from 'primeng/button';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FormsModule } from '@angular/forms';
     SharedModule,
     InputTextModule,
     FormsModule,
-    PasswordModule
+    PasswordModule,
+    ButtonModule
   ]
 })
 export class LoginModule { }

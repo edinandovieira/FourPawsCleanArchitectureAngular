@@ -5,6 +5,7 @@ $tertiary-color: #FEF0DD;
 $quaternary-color: #9E5F0E;
 $quintenary-color: #282B38;
 $bg-send: #25B456;
+$bg-send-hover: #469e65;
 
 body{
   margin: 0;
@@ -45,3 +46,31 @@ input, .p-inputtext{
   color: $primary-color;
 }
 
+/*FORM SYS*/
+.form-sys{
+  padding: 30px;
+  margin: 0px 30px;
+  border: 3px solid $primary-color;
+  border-radius: 35px;
+  background-color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.form-sys .bg-send{
+  background-color: $bg-send;
+  padding: 10px;
+  border: 3px solid $bg-send;
+  border-radius: 7px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.form-sys .bg-send:hover{
+  background-color: $bg-send-hover;
+  border-color: $bg-send-hover;
+}
+
+.form-sys .field label{
+  color: $quintenary-color;
+}
