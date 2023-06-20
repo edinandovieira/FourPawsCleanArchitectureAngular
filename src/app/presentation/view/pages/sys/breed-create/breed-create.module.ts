@@ -7,6 +7,8 @@ import { BreedCreateRoutingModule } from './breed-create-routing.module';
 import { SharedModule } from 'src/app/presentation/shared/shared.module';
 import { FormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
+import { ToastModule } from 'primeng/toast';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { ButtonModule } from 'primeng/button';
     BreedCreateRoutingModule,
     SharedModule,
     FormsModule,
-    ButtonModule    
+    ButtonModule,
+    NoopAnimationsModule,
+    ToastModule    
   ]
 })
 export class BreedCreateModule { }

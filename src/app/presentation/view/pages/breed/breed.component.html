@@ -13,15 +13,15 @@
 <div class="card">
   <div class="card-container">
       <div class="flex breed-alphabetic">
-          <div class="flex flex-auto border-round" *ngFor="let breed of breeds">{{breed}}</div>
+          <div class="flex flex-auto border-round" *ngFor="let breed of breedFilter | keyvalue">{{breed.key}}</div>
       </div>
   </div>
 </div>
 <div>
-  <div class="breed-letter" *ngFor="let breed of breeds">
+  <div class="breed-letter" *ngFor="let breed of breedFilter | keyvalue">
     <div class="grid">
       <div class="col-1">
-        {{breed}}
+        {{breed.key}}
       </div>
       <div class="col-11">
         <hr>
@@ -30,9 +30,9 @@
     <div class="card">
       <div class="card-container purple-container overflow-hidden">
         <div class="flex flex-auto">
-          <div class="text-center breed-xl">
-            <p><img src="../../../../../assets/breeds/akita.webp" class="p-avatar ml-3 mr-3" alt=""></p>
-            Akita
+          <div class="text-center breed-xl" *ngFor="let bv of breed.value">
+            <p><img src="https://localhost:7038/v1/raca/avatar/{{bv.codigo}}" class="p-avatar ml-3 mr-3" alt=""></p>
+            {{bv.nome}}
           </div>
         </div>
       </div>

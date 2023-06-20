@@ -1,17 +1,22 @@
 import { BreedService } from './../../../../../data/sys/breed.service';
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
+import { MessageService } from 'primeng/api';
 
 @Component({
   selector: 'app-breed-create',
   templateUrl: './breed-create.component.html',
-  styleUrls: ['./breed-create.component.scss']
+  styleUrls: ['./breed-create.component.scss'],
+  providers: [MessageService]
 })
 export class BreedCreateComponent {
+  @ViewChild('breedFile') fileInput!: ElementRef;
+  
   title = "Cadastro de Raças";
   loading: boolean = false;
 
   constructor(
-    private breedService:BreedService
+    private breedService:BreedService,
+    private messageService: MessageService
   ){
 
   }
@@ -30,8 +35,18 @@ export class BreedCreateComponent {
 
     try{
       this.loading = true;
-      this.breedService.Create(formData);
+      this.breedService.Create(formData)
+        .subscribe(
+          (response) => {
+            this.messageService.add({severity: 'success', summary: 'Success', detail: 'Raça criada com sucesso, código: ' + response.codigo  + ' nome: ' + response.nome });
+          }
+        );
+      
+      this.breed = "";
+      this.fileInput.nativeElement.value = "";
+      this.loading = false;
     }catch (error) {
+      this.messageService.add({severity: 'error', summary: 'Error', detail: 'Ocorreu um erro' });
       this.loading = false;
     }
   }

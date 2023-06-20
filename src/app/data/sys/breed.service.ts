@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { AuthService } from './../../infra/auth.service';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -18,11 +19,20 @@ export class BreedService {
     })
   }  
 
-  Create(form: FormData){
+  Create(form: FormData): Observable<any>{
     return this.http
-                .post(`${baseUrl}v1/raca`,form, {headers: this.header})
-                .subscribe((response) => {
-                  this.router.navigate(['sys/breed/create']);
-                });
+                .post(`${baseUrl}v1/raca`,form, {headers: this.header});
+  }
+
+  GetAll(): Observable<any>{
+    return this.http.get(`${baseUrl}v1/raca`, {headers: this.header});
+  }
+
+  Get(id: string): Observable<any>{
+    return this.http.get(`${baseUrl}v1/raca/${id}`, {headers: this.header});
+  }
+
+  GetAvatar(id: string): Observable<any>{
+    return this.http.get(`${baseUrl}v1/raca/avatar/${id}`, {headers: this.header});
   }
 }

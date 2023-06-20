@@ -19,22 +19,6 @@
   color: $primary-color;
 }
 
-.bg-send{
-  background-color: $bg-send;
-  padding: 10px;
-  border: 3px solid $bg-send;
-  border-radius: 7px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: normal;
-}
-
-.bg-send:hover{
-  background-color: #4b8760;
-  border-color: #4b8760;
-  cursor: pointer;
-  color: white;
-}
-
 .login-input{
   background-color: white;
   color: black;
@@ -61,4 +45,8 @@
   border-radius: 7px;
   font-family: 'Montserrat', sans-serif;
   padding: 20px
+}
+
+.btn-send{
+  background-color: black;
 }
