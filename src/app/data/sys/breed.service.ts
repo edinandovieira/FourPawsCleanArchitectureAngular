@@ -33,6 +33,6 @@ export class BreedService {
   }
 
   GetAvatar(id: string): Observable<any>{
-    return this.http.get(`${baseUrl}v1/raca/avatar/${id}`, {headers: this.header});
+    return this.http.get(`${baseUrl}v1/raca/avatar/${id}`);
   }
 }

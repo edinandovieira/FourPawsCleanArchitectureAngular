@@ -74,3 +74,25 @@ input, .p-inputtext{
 .form-sys .field label{
   color: $quintenary-color;
 }
+
+.form-sys .table-list .tl-th
+{
+  color: $primary-color;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.form-sys .table-list .tl-td
+{
+  color: $quintenary-color;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+}
+
+.form-sys .table-list .tl-th,
+.form-sys .table-list .tl-td
+{
+  background-color: white;
+  border-color: $primary-color;
+}

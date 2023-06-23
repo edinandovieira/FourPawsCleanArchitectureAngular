@@ -7,6 +7,10 @@ import { BreedModule } from './breed/breed.module';
 import { HomeSysModule } from './sys/home/home.module';
 import { BreedCreateModule } from './sys/breed-create/breed-create.module';
 import { ProductCreateModule } from './sys/product-create/product-create.module';
+import { BreedListModule } from './sys/breed-list/breed-list.module';
+import { ProductEditModule } from './sys/product-edit/product-edit.module';
+import { BreedEditModule } from './sys/breed-edit/breed-edit.module';
+import { ProductListModule } from './sys/product-list/product-list.module';
 
 import { HttpClientModule } from '@angular/common/http';
 
@@ -20,6 +24,10 @@ import { HttpClientModule } from '@angular/common/http';
     HomeSysModule,
     BreedCreateModule,
     ProductCreateModule,
+    BreedListModule,
+    ProductListModule,
+    BreedEditModule,
+    ProductEditModule,
     HttpClientModule
   ]
 })
