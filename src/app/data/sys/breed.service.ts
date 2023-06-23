@@ -35,4 +35,12 @@ export class BreedService {
   GetAvatar(id: string): Observable<any>{
     return this.http.get(`${baseUrl}v1/raca/avatar/${id}`);
   }
+
+  GetStatus(){
+    let options: { [key: string]: string } = {
+      'Ativo': 'A',
+      'Inativo': 'I'
+    };
+    return options;
+  }
 }

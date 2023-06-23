@@ -1,1 +1,36 @@
-<p>breed-edit works!</p>
+<app-headersys></app-headersys>
+<app-sys-title title={{title}}></app-sys-title>
+<div class="form-sys">
+  <div class="grid">
+    <div class="col-12">
+      <div class="field breed-xl">
+        <label>Thumbnail Atual</label><br>
+        <img src="https://localhost:7038/v1/raca/avatar/{{breed.codigo}}" class="p-avatar ml-3 mr-3" alt="">
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="field">
+        <label for="firstname1">Raça</label><br>
+        <input type="text" name="breed" pInputText class="w-full border-round-lg" placeholder="Chow Chow" [(ngModel)]="breed.nome"/>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="field">
+        <label for="firstname1">Status</label><br>
+        <select [(ngModel)]="statusSelected" name="status" class="w-full border-round-lg">
+          <option *ngFor="let option of statusOpt" [value]="option.value">{{ option.key }}</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="field">
+        <label for="firstname1">Thumbnail</label><br>
+        <input type="file" #breedFile name="breedFile" pInputText class="w-full border-round-lg" placeholder="Nenhum arquivo escolhido" (change)="onFileSelected($event)"/>
+      </div>
+    </div>
+    <div class="col-12">
+      <p-button label="SALVAR" styleClass="text-white w-full bg-send" [loading]="loading" (click)="submitData()"></p-button>
+    </div>
+  </div>
+</div>
+<p-toast position="bottom-right"></p-toast>

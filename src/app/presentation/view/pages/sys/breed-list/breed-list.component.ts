@@ -17,8 +17,8 @@ export class BreedListComponent implements OnInit {
 
   }
 
-  breedEdit(){
-    this.router.navigate(['sys/breed/edit']);
+  breedEdit(id: string){
+    this.router.navigate(['sys/breed/edit/'+id]);
   }
 
   ngOnInit(){

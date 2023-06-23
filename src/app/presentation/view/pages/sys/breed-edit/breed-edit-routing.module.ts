@@ -5,7 +5,7 @@ import { AuthGuard } from 'src/app/infra/auth.guard';
 import { BreedEditComponent } from './breed-edit.component';
 
 const routes: Routes = [
-  { path: 'sys/breed/edit', component: BreedEditComponent, canActivate: [AuthGuard] }
+  { path: 'sys/breed/edit/:id', component: BreedEditComponent, canActivate: [AuthGuard] }
 ];
 
 @NgModule({
