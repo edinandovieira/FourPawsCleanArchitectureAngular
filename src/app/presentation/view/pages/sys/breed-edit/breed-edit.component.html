@@ -5,7 +5,7 @@
     <div class="col-12">
       <div class="field breed-xl">
         <label>Thumbnail Atual</label><br>
-        <img src="https://localhost:7038/v1/raca/avatar/{{breed.codigo}}" class="p-avatar ml-3 mr-3" alt="">
+        <img [src]="breedImg" class="p-avatar ml-3 mr-3" alt="">
       </div>
     </div>
     <div class="col-12">
@@ -17,8 +17,8 @@
     <div class="col-12">
       <div class="field">
         <label for="firstname1">Status</label><br>
-        <select [(ngModel)]="statusSelected" name="status" class="w-full border-round-lg">
-          <option *ngFor="let option of statusOpt" [value]="option.value">{{ option.key }}</option>
+        <select [(ngModel)]="breed.status" name="status" class="w-full border-round-lg">
+          <option *ngFor="let option of statusOpt" [value]="option">{{ option }}</option>
         </select>
       </div>
     </div>

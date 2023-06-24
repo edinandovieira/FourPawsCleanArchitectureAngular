@@ -7,8 +7,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-
-export class BreedService {
+export class ProductService {
 
   header;
 
@@ -20,19 +19,19 @@ export class BreedService {
 
   Create(form: FormData): Observable<any>{
     return this.http
-                .post(`${baseUrl}v1/raca`,form, {headers: this.header});
+                .post(`${baseUrl}v1/produto`,form, {headers: this.header});
   }
 
   GetAll(): Observable<any>{
-    return this.http.get(`${baseUrl}v1/raca`, {headers: this.header});
+    return this.http.get(`${baseUrl}v1/produto`, {headers: this.header});
   }
 
   Get(id: string): Observable<any>{
-    return this.http.get(`${baseUrl}v1/raca/${id}`, {headers: this.header});
+    return this.http.get(`${baseUrl}v1/produto/${id}`, {headers: this.header});
   }
 
   GetAvatar(id: string): Observable<any>{
-    return this.http.get(`${baseUrl}v1/raca/avatar/${id}`);
+    return this.http.get(`${baseUrl}v1/produto/avatar/${id}`);
   }
 
   GetStatus(){
@@ -42,6 +41,6 @@ export class BreedService {
 
   Update(id: string, form: FormData): Observable<any>{
     return this.http
-                .put(`${baseUrl}v1/raca/${id}`,form, {headers: this.header});
+                .put(`${baseUrl}v1/produto/${id}`,form, {headers: this.header});
   }
 }

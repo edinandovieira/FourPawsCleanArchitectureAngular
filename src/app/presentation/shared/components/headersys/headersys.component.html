@@ -2,15 +2,15 @@
 
   <div class="grid">
     <div class="col-8">
-      <a href="/">
+      <a routerLink="/">
         <img src={{logo01}} alt="">
       </a>
     </div>
-    <a class="col-2 menu-item" href="/login">
+    <a class="col-2 menu-item" routerLink="/sys/home">
       <i class="pi pi-user"></i>
       {{login}}
     </a>
-    <a class="col-2 menu-item" href="">
+    <a class="col-2 menu-item hover:bg-black cursor-pointer" (click)="logout()">
       <i class="pi pi-sign-out"></i>
       Sair
     </a>

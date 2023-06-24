@@ -7,6 +7,7 @@ import { SysTitleComponent } from './components/sys/sys-title/sys-title.componen
 import { SysFormComponent } from './components/sys/sys-form/sys-form.component';
 
 import { InputTextModule } from 'primeng/inputtext';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { InputTextModule } from 'primeng/inputtext';
   ],
   imports: [
     CommonModule,
-    InputTextModule
+    InputTextModule,
+    RouterModule
   ],
   exports: [
     HeadersiteComponent,

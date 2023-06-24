@@ -25,8 +25,8 @@ export class BreedEditComponent implements OnInit {
   }
 
   breed: any;
-  statusSelected: string = "";
-  statusOpt: { key: string, value: string }[] = [];
+  breedImg: string = "";
+  statusOpt: string[] = [];
   breedFile: any;
   id: any;
 
@@ -37,13 +37,9 @@ export class BreedEditComponent implements OnInit {
 
     this.breedService.Get(this.id).subscribe(
       (response) => {
-        for (const key in this.breedService.GetStatus()) {
-          if (this.breedService.GetStatus().hasOwnProperty(key)) {
-            this.statusOpt.push({ key, value: this.breedService.GetStatus()[key] });
-          }
-        }
+        this.statusOpt = this.breedService.GetStatus();
         this.breed = response;
-        this.statusSelected = response.status.charAt(0).toUpperCase();
+        this.breedImg = `https://localhost:7038/v1/raca/avatar/${this.id}?timestamp=${Date.now()}`;
         //this.messageService.add({severity: 'success', summary: 'Success', detail: 'Raça criada com sucesso, código: ' + response.codigo  + ' nome: ' + response.nome });
       }
     );;
@@ -55,25 +51,27 @@ export class BreedEditComponent implements OnInit {
   }
 
   submitData() {
-    /*let formData = new FormData();
-    formData.set("nome",this.breed)
+    let formData = new FormData();
+    formData.set("nome",this.breed.nome)
+    formData.set("status",this.breed.status)
     formData.set("file",this.breedFile)
 
     try{
       this.loading = true;
-      this.breedService.Create(formData)
+      this.breedService.Update(this.id, formData)
         .subscribe(
           (response) => {
-            this.messageService.add({severity: 'success', summary: 'Success', detail: 'Raça criada com sucesso, código: ' + response.codigo  + ' nome: ' + response.nome });
+            this.breed = response;
+            this.breedImg = `https://localhost:7038/v1/raca/avatar/${this.id}?timestamp=${Date.now()}`;
+            this.messageService.add({severity: 'success', summary: 'Success', detail: 'Raça alterada com sucesso'});
           }
         );
       
-      this.breed = "";
       this.fileInput.nativeElement.value = "";
       this.loading = false;
     }catch (error) {
       this.messageService.add({severity: 'error', summary: 'Error', detail: 'Ocorreu um erro' });
       this.loading = false;
-    }*/
+    }
   }
 }
