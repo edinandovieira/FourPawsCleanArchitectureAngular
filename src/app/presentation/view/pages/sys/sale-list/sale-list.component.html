@@ -1,0 +1,22 @@
+<app-headersys></app-headersys>
+<app-sys-title title={{title}}></app-sys-title>
+<div class="form-sys mb-3">
+  <p-table [value]="saleFilter" [tableStyle]="{ 'min-width': '50rem' }" tableStyleClass="table-list">
+    <ng-template pTemplate="header">
+        <tr>
+            <th class="tl-th">Código</th>
+            <th class="tl-th">Total</th>
+            <th class="tl-th">Ação</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-saleFilter>
+        <tr>
+            <td class="tl-td">{{ saleFilter.codigo }}</td>
+            <td class="tl-td">{{ saleFilter.total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) }}</td>
+            <td class="tl-td">
+              <p-button icon="pi pi-eye" (click)="saleView(saleFilter.codigo)" styleClass="text-white bg-orange-400 hover:bg-orange-700 border-orange-400 hover:border-orange-700"></p-button>
+            </td>
+        </tr>
+    </ng-template>
+  </p-table>
+</div>

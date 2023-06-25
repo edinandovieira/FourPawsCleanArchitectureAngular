@@ -1,1 +1,27 @@
-<p>product-list works!</p>
+<app-headersys></app-headersys>
+<app-sys-title title={{title}}></app-sys-title>
+<div class="form-sys mb-3">
+  <p-table [value]="productFilter" [tableStyle]="{ 'min-width': '50rem' }" tableStyleClass="table-list">
+    <ng-template pTemplate="header">
+        <tr>
+            <th class="tl-th">Avatar</th>
+            <th class="tl-th">Código</th>
+            <th class="tl-th">Raça</th>
+            <th class="tl-th">Status</th>
+            <th class="tl-th">Ação</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-productFilter>
+        <tr>
+            <td class="breed-xl tl-td"><img src="https://localhost:7038/v1/produto/avatar/{{productFilter.codigo}}" class="p-avatar ml-3 mr-3" alt=""></td>
+            <td class="tl-td">{{ productFilter.codigo }}</td>
+            <td class="tl-td">{{ productFilter.nome }}</td>
+            <td class="tl-td">{{ productFilter.status }}</td>
+            <td class="tl-td">
+              <p-button icon="pi pi-pencil" (click)="productEdit(productFilter.codigo)" styleClass="text-white bg-orange-400 hover:bg-orange-700 border-orange-400 hover:border-orange-700"></p-button>&nbsp;
+              <p-button icon="pi pi-trash" styleClass="text-white bg-red-600 hover:bg-red-800 border-red-600 hover:border-red-800"></p-button>
+            </td>
+        </tr>
+    </ng-template>
+  </p-table>
+</div>

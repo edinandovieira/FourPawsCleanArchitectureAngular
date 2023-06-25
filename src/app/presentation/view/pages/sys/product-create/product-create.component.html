@@ -11,13 +11,12 @@
     <div class="col-12">
       <div class="field">
         <label for="category">Categoria</label><br>
-        <select [(ngModel)]="category" name="category" class="w-full border-round-lg">
+        <select [(ngModel)]="category" name="category" class="w-full border-round-lg form-control">
           <ng-container *ngIf="!category">
             <option value="" disabled selected>Selecione uma opção...</option>
           </ng-container>
           <option *ngFor="let option of categoryOpt" [value]="option.codigo">{{ option.nome }}</option>
         </select>
-        <p-dropdown [options]="cities" optionValue="codigo" optionLabel="nome"></p-dropdown>
       </div>
     </div>
     <div class="col-12">
@@ -29,13 +28,13 @@
     <div class="col-12">
       <div class="field">
         <label for="stock">Estoque</label><br>
-        <p-inputNumber [(ngModel)]="stock" class="w-full" styleClass="w-full" inputId="stock" locale="pt-BR"> </p-inputNumber>
+        <p-inputNumber [(ngModel)]="stock" class="w-full" styleClass="w-full" inputId="stock" locale="pt-BR" placeholder="30"> </p-inputNumber>
       </div>
     </div>
     <div class="col-12">
       <div class="field">
         <label for="price">Preço</label><br>
-        <p-inputNumber class="w-full" styleClass="w-full" mode="currency" inputId="price" currency="BRL" locale="pt-BR"> </p-inputNumber>
+        <p-inputNumber [(ngModel)]="price" class="w-full" styleClass="w-full" mode="currency" inputId="price" currency="BRL" locale="pt-BR" placeholder="R$ 50,00"> </p-inputNumber>
       </div>
     </div>
     <div class="col-12">

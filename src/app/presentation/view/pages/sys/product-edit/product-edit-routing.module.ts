@@ -5,7 +5,7 @@ import { AuthGuard } from 'src/app/infra/auth.guard';
 import { ProductEditComponent } from './product-edit.component';
 
 const routes: Routes = [
-  { path: 'sys/product/edit', component: ProductEditComponent, canActivate: [AuthGuard] }
+  { path: 'sys/product/edit/:id', component: ProductEditComponent, canActivate: [AuthGuard] }
 ];
 
 @NgModule({

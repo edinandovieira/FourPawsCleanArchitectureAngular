@@ -40,6 +40,8 @@ select, input, .p-inputtext{
   background-color: white;
   border: 2px solid #E9E9E9;
   color: $quintenary-color;
+  font-size: 1rem;
+  padding: 0.5rem 0.5rem;
 }
 
 .p-input-icon-right > i:last-of-type, .p-input-icon-left > i:first-of-type{

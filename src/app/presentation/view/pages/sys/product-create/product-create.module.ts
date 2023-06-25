@@ -11,7 +11,6 @@ import { ToastModule } from 'primeng/toast';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { InputTextModule } from 'primeng/inputtext';
-import { DropdownModule } from 'primeng/dropdown';
 
 @NgModule({
   declarations: [
@@ -26,8 +25,7 @@ import { DropdownModule } from 'primeng/dropdown';
     ToastModule,
     NoopAnimationsModule,
     InputNumberModule,
-    InputTextModule,
-    DropdownModule
+    InputTextModule
   ]
 })
 export class ProductCreateModule { }

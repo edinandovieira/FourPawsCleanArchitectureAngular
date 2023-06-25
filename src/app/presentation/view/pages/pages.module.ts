@@ -1,3 +1,6 @@
+import { SaleCreateModule } from './sys/sale-create/sale-create.module';
+import { SaleDetailModule } from './sys/sale-detail/sale-detail.module';
+import { SaleListModule } from './sys/sale-list/sale-list.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -28,6 +31,9 @@ import { HttpClientModule } from '@angular/common/http';
     ProductListModule,
     BreedEditModule,
     ProductEditModule,
+    SaleCreateModule,
+    SaleListModule,
+    SaleDetailModule,
     HttpClientModule
   ]
 })

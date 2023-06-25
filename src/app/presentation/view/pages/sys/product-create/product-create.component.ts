@@ -3,12 +3,6 @@ import { ProductService } from './../../../../../data/sys/product.service';
 import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
 import { MessageService } from 'primeng/api';
 
-interface Item {
-  nome: string;
-  codigo: string;
-  status: string;
-}
-
 @Component({
   selector: 'app-product-create',
   templateUrl: './product-create.component.html',
@@ -30,22 +24,17 @@ export class ProductCreateComponent implements OnInit {
   }
 
   product: any;
-  category: any;
+  category: any = "";
   categoryOpt: any;
   unit: any;
   stock: any;
-  price: any;
+  price: any;  
   productFile: any;
-
-  cities: Item[] = [];
-  selectedCity = "";
 
   ngOnInit(){
     this.categoryService.GetAll().subscribe(
       (response) => {
         this.categoryOpt = response;
-        this.cities = response;
-        console.log(this.cities);
       }
     );
   }
@@ -56,76 +45,32 @@ export class ProductCreateComponent implements OnInit {
 
   submitData() {
     let formData = new FormData();
-    /*formData.set("nome",this.breed)
-    formData.set("file",this.breedFile)
+    formData.set("nome", this.product)
+    formData.set("codigoCategoria", this.category)
+    formData.set("unidade", this.unit)
+    formData.set("estoque", this.stock)
+    formData.set("preco", this.price)
+    formData.set("file", this.productFile)
 
     try{
       this.loading = true;
-      this.breedService.Create(formData)
+      formData.forEach(item => {
+        console.log(item);
+      });
+      console.log(formData);
+      this.productService.Create(formData)
         .subscribe(
           (response) => {
-            this.messageService.add({severity: 'success', summary: 'Success', detail: 'Raça criada com sucesso, código: ' + response.codigo  + ' nome: ' + response.nome });
+            this.messageService.add({severity: 'success', summary: 'Success', detail: 'Produto criado com sucesso, código: ' + response.codigo  + ' nome: ' + response.nome });
           }
         );
       
-      this.breed = "";
+      this.product = this.category = this.unit = this.stock = this.price = "";
       this.fileInput.nativeElement.value = "";
       this.loading = false;
     }catch (error) {
       this.messageService.add({severity: 'error', summary: 'Error', detail: 'Ocorreu um erro' });
       this.loading = false;
-    }*/
-  }
-
-  form = {
-    "title": "",
-    "input": [
-      {
-        "title": "Produto",
-        "placeholder": "Osso",
-        "type": "text",
-        "grid": "col-12",
-        "class": "w-full border-round-xl"
-      },
-      {
-        "title": "Categoria",
-        "placeholder": "Brinquedo",
-        "type": "select",
-        "grid": "col-12",
-        "class": "w-full border-round-xl"
-      },
-      {
-        "title": "Unidade",
-        "placeholder": "Un",
-        "type": "select",
-        "grid": "col-12",
-        "class": "w-full border-round-xl"
-      },
-      {
-        "title": "Estoque",
-        "placeholder": "50",
-        "type": "number",
-        "grid": "col-12",
-        "class": "w-full border-round-xl"
-      },
-      {
-        "title": "Preço",
-        "placeholder": "R$ 8,00",
-        "type": "number",
-        "grid": "col-12",
-        "class": "w-full border-round-xl"
-      },
-      {
-        "title": "Thumbnail",
-        "placeholder": "Nenhum arquivo escolhido",
-        "type": "file",
-        "grid": "col-12",
-        "class": "w-full border-round-xl"
-      }
-    ],
-    "submit": {
-      "class": "text-white w-full bg-send",
-      "title":"SALVAR"
     }
   }
 }

@@ -40,9 +40,8 @@ export class BreedEditComponent implements OnInit {
         this.statusOpt = this.breedService.GetStatus();
         this.breed = response;
         this.breedImg = `https://localhost:7038/v1/raca/avatar/${this.id}?timestamp=${Date.now()}`;
-        //this.messageService.add({severity: 'success', summary: 'Success', detail: 'Raça criada com sucesso, código: ' + response.codigo  + ' nome: ' + response.nome });
       }
-    );;
+    );
   }
 
 

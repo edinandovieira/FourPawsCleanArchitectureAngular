@@ -1,24 +1,23 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { ProductListRoutingModule } from './product-list-routing.module';
-import { ProductListComponent } from './product-list.component';
+import { SaleListRoutingModule } from './sale-list-routing.module';
+import { SaleListComponent } from './sale-list.component';
 
 import { SharedModule } from 'src/app/presentation/shared/shared.module';
 import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
 
-
 @NgModule({
   declarations: [
-    ProductListComponent
+    SaleListComponent
   ],
   imports: [
     CommonModule,
-    ProductListRoutingModule,
+    SaleListRoutingModule,
     SharedModule,
     TableModule,
     ButtonModule
   ]
 })
-export class ProductListModule { }
+export class SaleListModule { }

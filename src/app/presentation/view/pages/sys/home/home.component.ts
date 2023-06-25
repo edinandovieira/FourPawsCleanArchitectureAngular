@@ -12,6 +12,10 @@ export class HomeComponent {
       'navigate': [
         {
           'icon': 'pi-plus-circle',
+          'title': 'Venda',
+          'route': 'sale/create'
+        },{
+          'icon': 'pi-plus-circle',
           'title': 'Raça',
           'route': 'breed/create'
         },
@@ -36,6 +40,10 @@ export class HomeComponent {
       'title': 'Consultar',
       'navigate': [
         {
+          'icon': 'pi-search',
+          'title': 'Venda',
+          'route': 'sale/list'
+        },{
           'icon': 'pi-search',
           'title': 'Raça',
           'route': 'breed/list'

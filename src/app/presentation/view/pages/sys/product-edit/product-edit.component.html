@@ -1,1 +1,62 @@
-<p>product-edit works!</p>
+<app-headersys></app-headersys>
+<app-sys-title title={{title}}></app-sys-title>
+<div class="form-sys">
+  <div class="grid">
+    <div class="col-12">
+      <div class="field breed-xl">
+        <label>Thumbnail Atual</label><br>
+        <img [src]="productImg" class="p-avatar ml-3 mr-3" alt="">
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="field">
+        <label for="product">Produto</label><br>
+        <input type="text" name="product" pInputText class="w-full border-round-lg" placeholder="Osso" [(ngModel)]="product.nome"/>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="field">
+        <label for="category">Categoria</label><br>
+        <select [(ngModel)]="product.codigoCategoria" name="category" class="w-full border-round-lg form-control">
+          <option *ngFor="let option of categoryOpt" [value]="option.codigo">{{ option.nome }}</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="field">
+        <label for="unit">Unidade</label><br>
+        <input type="text" name="unit" pInputText class="w-full border-round-lg" placeholder="Un" [(ngModel)]="product.unidade"/>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="field">
+        <label for="stock">Estoque</label><br>
+        <p-inputNumber [(ngModel)]="product.estoque" class="w-full" styleClass="w-full" inputId="stock" locale="pt-BR" placeholder="30"> </p-inputNumber>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="field">
+        <label for="price">Preço</label><br>
+        <p-inputNumber [(ngModel)]="product.preco" class="w-full" styleClass="w-full" mode="currency" inputId="price" currency="BRL" locale="pt-BR" placeholder="R$ 50,00"> </p-inputNumber>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="field">
+        <label for="firstname1">Status</label><br>
+        <select [(ngModel)]="product.status" name="status" class="w-full border-round-lg">
+          <option *ngFor="let option of statusOpt" [value]="option">{{ option }}</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="field">
+        <label for="firstname1">Thumbnail</label><br>
+        <input type="file" #productFile name="productFile" pInputText class="w-full border-round-lg" placeholder="Nenhum arquivo escolhido" (change)="onFileSelected($event)"/>
+      </div>
+    </div>
+    <div class="col-12">
+      <p-button label="SALVAR" styleClass="text-white w-full bg-send" [loading]="loading" (click)="submitData()"></p-button>
+    </div>
+  </div>
+</div>
+<p-toast position="bottom-right"></p-toast>
