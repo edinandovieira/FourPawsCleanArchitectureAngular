@@ -1,16 +1,16 @@
 <app-headersys></app-headersys>
 <app-sys-title title={{title}}></app-sys-title>
-<div class="form-sys">
+<div class="form-sys mb-3">
   <div class="col-12">
     <div class="field">
       <label for="sale">Venda</label><br>
-      <input type="text" name="sale" pInputText class="w-full border-round-lg" value="{{sale[0].codigo}}" readonly/>
+      <input type="text" name="sale" pInputText class="w-full border-round-lg" value="{{sale[0].CodigoVenda}}" readonly/>
     </div>
   </div>
   <div class="col-12">
     <div class="field">
       <label for="client">Cliente</label><br>
-      <input type="text" name="client" pInputText class="w-full border-round-lg" value="{{sale[0].codigoCliente}}" readonly/>
+      <input type="text" name="client" pInputText class="w-full border-round-lg" value="{{sale[0].Clientes.Nome}}" readonly/>
     </div>
   </div>
   <hr>
@@ -32,10 +32,10 @@
         </ng-template>
         <ng-template pTemplate="body" let-sale>
             <tr>
-                <td class="tl-td breed-xl"><img src="https://localhost:7038/v1/produto/avatar/{{sale.codigoProduto}}" alt=""></td>
-                <td class="tl-td">{{sale}}</td>
-                <td class="tl-td">{{sale.quantidade}}</td>
-                <td class="tl-td">{{ sale.preco.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) }}</td>
+                <td class="tl-td breed-xl"><img src="https://localhost:7038/v1/produto/avatar/{{sale.CodigoProduto}}" alt=""></td>
+                <td class="tl-td">{{sale.Produtos.Nome}}</td>
+                <td class="tl-td">{{sale.Quantidade}}</td>
+                <td class="tl-td">{{ sale.Produtos.Preco.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) }}</td>
             </tr>
         </ng-template>
       </p-table>

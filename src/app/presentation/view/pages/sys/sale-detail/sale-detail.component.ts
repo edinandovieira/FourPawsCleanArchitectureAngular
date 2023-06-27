@@ -26,8 +26,9 @@ export class SaleDetailComponent implements OnInit {
 
     this.saleService.Get(this.id).subscribe(
       (response) =>{
-        this.sale = response;
-        console.log(response);
+        this.sale = response.$values;
+        console.log(this.sale);
+        console.log(this.sale[0].CodigoCliente + '-' + this.sale[0].Clientes.Nome )
       }
     )
   }

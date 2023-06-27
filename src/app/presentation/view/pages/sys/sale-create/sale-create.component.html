@@ -1,1 +1,76 @@
-<p>sale-create works!</p>
+<app-headersys></app-headersys>
+<app-sys-title title={{title}}></app-sys-title>
+<div class="form-sys mb-3">
+  <div class="col-12">
+    <div class="field">
+      <label for="client">Cliente</label><br>
+      <select [(ngModel)]="client" name="client" class="w-full border-round-lg">
+        <ng-container *ngIf="!client">
+          <option value="" disabled selected>Selecione uma opção...</option>
+        </ng-container>
+        <option *ngFor="let option of clients" [value]="option.codigo">{{ option.nome }}</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="product">Produto</label><br>
+      <select [(ngModel)]="product" (change)="selectedProduct($event)" name="product" class="w-full border-round-lg" required>
+        <ng-container *ngIf="!product">
+          <option value="" disabled selected>Selecione uma opção...</option>
+        </ng-container>
+        <option *ngFor="let option of products" [value]="option.codigo">{{ option.nome }}</option>
+      </select>
+    </div>
+    <div class="col-12">
+      <div class="field">
+        <label for="unit">Unidade</label><br>
+        <input type="text" name="unit" pInputText class="w-full border-round-lg" [(ngModel)]="unit" readonly/>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="field">
+        <label for="quantity">Quantidade</label><br>
+        <p-inputNumber [(ngModel)]="quantity" (ngModelChange)="priceCalculate()" class="w-full" styleClass="w-full" inputId="quantity" [min]="0" [max]="maxQuantity" [showButtons]="true" buttonLayout="horizontal" spinnerMode="horizontal" [step]="1" decrementButtonClass="p-button-danger" incrementButtonClass="p-button-success" incrementButtonIcon="pi pi-plus" decrementButtonIcon="pi pi-minus"> </p-inputNumber>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="field">
+        <label for="price">Preço</label><br>
+        <input type="text" name="price" pInputText class="w-full border-round-lg" [(ngModel)]="currentPrice" readonly/>
+      </div>
+    </div>
+
+    <div class="col-12">
+      <p-button label="ADICIONAR AO CARRINHO" styleClass="text-white w-full bg-send" (click)="sendToCart()"></p-button>
+    </div>
+
+    <div class="field">
+      <br>
+      <label for="price">Carrinho</label>
+      <br>  
+    </div>
+    <p-table [value]="cart" [tableStyle]="{ 'min-width': '50rem' }" tableStyleClass="table-list">
+      <ng-template pTemplate="header">
+          <tr>
+              <th class="tl-th">Produto</th>
+              <th class="tl-th">Quantidade</th>
+              <th class="tl-th">Total</th>
+              <th class="tl-th">Ação</th>
+          </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-cart let-i="rowIndex">
+          <tr>
+            <td class="tl-td">{{ cart.nome }}</td>
+            <td class="tl-td">{{ cart.quantidade }}</td>
+            <td class="tl-td">{{ cart.preco.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) }}</td>
+            <td class="tl-td">
+              <p-button icon="pi pi-trash" (click)="removeCart(i)" styleClass="text-white bg-orange-400 hover:bg-orange-700 border-orange-400 hover:border-orange-700"></p-button>
+            </td>
+          </tr>
+      </ng-template>
+    </p-table>
+
+    <div class="col-12 mt-3">
+      <p-button label="SALVAR" styleClass="text-white w-full bg-send" [loading]="loading" (click)="submitData()"></p-button>
+    </div>
+  </div>
+</div> 
