@@ -1,18 +1,24 @@
 import { AuthService } from './../../../../infra/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { MessageService } from 'primeng/api';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
+  providers: [MessageService]
 })
 export class LoginComponent implements OnInit {
   username: string = "";
   password: string = "";
   loading: boolean = false;
 
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor(
+    private messageService: MessageService,
+    private authService: AuthService, 
+    private router: Router
+    ) {}
   ngOnInit() {}
   // initForm(){}
 
@@ -23,6 +29,7 @@ export class LoginComponent implements OnInit {
         this.router.navigate(['sys/home']);
       },
       error => {
+        this.messageService.add({severity: 'error', summary: 'Erro', detail: 'Login ou senha inválidos'});
         this.loading = false;
       }
     )

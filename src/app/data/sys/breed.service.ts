@@ -44,4 +44,8 @@ export class BreedService {
     return this.http
                 .put(`${baseUrl}v1/raca/${id}`,form, {headers: this.header});
   }
+
+  Remove(id: string): Observable<any>{
+    return this.http.delete(`${baseUrl}v1/raca/${id}`, {headers: this.header});
+  }
 }

@@ -17,7 +17,7 @@ export class CategoryService {
     })
   }  
 
-  Create(form: FormData): Observable<any>{
+  Create(form: any): Observable<any>{
     return this.http
                 .post(`${baseUrl}v1/categoria`,form, {headers: this.header});
   }
@@ -35,7 +35,7 @@ export class CategoryService {
     return options;
   }
 
-  Update(id: string, form: FormData): Observable<any>{
+  Update(id: string, form: any): Observable<any>{
     return this.http
                 .put(`${baseUrl}v1/categoria/${id}`,form, {headers: this.header});
   }

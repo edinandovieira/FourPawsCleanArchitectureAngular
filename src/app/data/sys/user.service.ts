@@ -7,7 +7,8 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class SaleService {
+export class UserService {
+
   header;
 
   constructor(private http:HttpClient, private auth:AuthService) { 
@@ -18,19 +19,24 @@ export class SaleService {
 
   Create(form: any): Observable<any>{
     return this.http
-                .post(`${baseUrl}v1/venda`,form, {headers: this.header});
+                .post(`${baseUrl}v1/usuario`,form, {headers: this.header});
   }
 
   GetAll(): Observable<any>{
-    return this.http.get(`${baseUrl}v1/venda`, {headers: this.header});
+    return this.http.get(`${baseUrl}v1/usuario`, {headers: this.header});
   }
 
   Get(id: string): Observable<any>{
-    return this.http.get(`${baseUrl}v1/venda/${id}`, {headers: this.header});
+    return this.http.get(`${baseUrl}v1/usuario/${id}`, {headers: this.header});
   }
 
   GetStatus(){
     let options: string[] = ['Ativo', 'Inativo'];
     return options;
+  }
+
+  Update(id: string, form: FormData): Observable<any>{
+    return this.http
+                .put(`${baseUrl}v1/usuario/${id}`,form, {headers: this.header});
   }
 }

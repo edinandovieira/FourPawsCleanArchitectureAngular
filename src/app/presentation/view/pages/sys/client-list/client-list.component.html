@@ -1,0 +1,26 @@
+<app-headersys></app-headersys>
+<app-sys-title title={{title}}></app-sys-title>
+<div class="form-sys mb-3">
+  <p-table [value]="clients" [tableStyle]="{ 'min-width': '50rem' }" tableStyleClass="table-list">
+    <ng-template pTemplate="header">
+        <tr>
+            <th class="tl-th">Nome</th>
+            <th class="tl-th">E-mail</th>
+            <th class="tl-th">Bairro</th>
+            <th class="tl-th">Telefone</th>
+            <th class="tl-th">Celular</th>
+            <th class="tl-th">Status</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-clients>
+        <tr>
+          <td class="tl-td">{{clients.nome}}</td>
+          <td class="tl-td">{{clients.email}}</td>
+          <td class="tl-td">{{clients.bairro}}</td>
+          <td class="tl-td">{{clients.telefone}}</td>
+          <td class="tl-td">{{clients.celular}}</td>
+          <td class="tl-td">{{clients.status}}</td>
+        </tr>
+    </ng-template>
+  </p-table>
+</div>

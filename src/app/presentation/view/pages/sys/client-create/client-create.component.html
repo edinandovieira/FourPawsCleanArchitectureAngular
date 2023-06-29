@@ -1,0 +1,59 @@
+<app-headersys></app-headersys>
+<app-sys-title title={{title}}></app-sys-title>
+<div class="form-sys mb-3">
+  <div class="col-12">
+    <div class="col-12">
+      <div class="field">
+        <label for="client">Nome</label><br>
+        <input type="text" name="client" pInputText class="w-full border-round-lg" [(ngModel)]="client"/>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="field">
+        <label for="rg">RG</label><br>
+        <p-inputMask mask="99.999.999?-9" class="w-full" styleClass="w-full" placeholder="99.999.999-9" [(ngModel)]="rg"></p-inputMask>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="field">
+        <label for="cpf">CPF</label><br>
+        <p-inputMask mask="999.999.999-99" class="w-full" styleClass="w-full" placeholder="999.999.999-99" [(ngModel)]="cpf"></p-inputMask>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="field">
+        <label for="address">Endereço</label><br>
+        <input type="text" name="address" pInputText class="w-full border-round-lg" [(ngModel)]="address"/>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="field">
+        <label for="email">E-mail</label><br>
+        <input type="email" name="email" pInputText class="w-full border-round-lg" [(ngModel)]="email"/>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="field">
+        <label for="neighborhood">Bairro</label><br>
+        <input type="text" name="neighborhood" pInputText class="w-full border-round-lg" [(ngModel)]="neighborhood"/>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="field">
+        <label for="phone">Telefone</label><br>
+        <p-inputMask mask="(99) ?999999999" class="w-full" styleClass="w-full" [(ngModel)]="phone" placeholder="(99) 99999-9999"></p-inputMask>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="field">
+        <label for="mobile">Celular</label><br>
+        <p-inputMask mask="(99) 99999-9999" class="w-full" styleClass="w-full" [(ngModel)]="mobile" placeholder="(99) 99999-9999"></p-inputMask>
+      </div>
+    </div>
+
+    <div class="col-12 mt-3">
+      <p-button label="SALVAR" styleClass="text-white w-full bg-send" (click)="submitData()"></p-button>
+    </div>
+  </div>
+</div> 
+<p-toast position="bottom-right"></p-toast>

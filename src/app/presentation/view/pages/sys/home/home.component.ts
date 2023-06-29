@@ -21,8 +21,8 @@ export class HomeComponent {
         },
         {
           'icon': 'pi-plus-circle',
-          'title': 'Pet',
-          'route': 'pet/create'
+          'title': 'Cliente',
+          'route': 'client/create'
         },
         {
           'icon': 'pi-user-plus',
@@ -33,6 +33,11 @@ export class HomeComponent {
           'icon': 'pi-plus-circle',
           'title': 'Produtos',
           'route': 'product/create'
+        },
+        {
+          'icon': 'pi-plus-circle',
+          'title': 'Categoria',
+          'route': 'category/create'
         }
       ]
     },
@@ -50,8 +55,8 @@ export class HomeComponent {
         },
         {
           'icon': 'pi-search',
-          'title': 'Pet',
-          'route': 'pet/list'
+          'title': 'Cliente',
+          'route': 'client/list'
         },
         {
           'icon': 'pi-search',
@@ -60,13 +65,18 @@ export class HomeComponent {
         },
         {
           'icon': 'pi-search',
-          'title': 'Produtos',
+          'title': 'Produto',
           'route': 'product/list'
+        },
+        {
+          'icon': 'pi-search',
+          'title': 'Categoria',
+          'route': 'category/list'
         }
       ]
     },
     {
-      'title': 'Consultar',
+      'title': 'Relatório',
       'navigate': [
         {
           'icon': 'pi-book',

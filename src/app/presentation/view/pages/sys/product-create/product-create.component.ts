@@ -54,10 +54,6 @@ export class ProductCreateComponent implements OnInit {
 
     try{
       this.loading = true;
-      formData.forEach(item => {
-        console.log(item);
-      });
-      console.log(formData);
       this.productService.Create(formData)
         .subscribe(
           (response) => {

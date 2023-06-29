@@ -1,0 +1,17 @@
+<app-headersys></app-headersys>
+<app-sys-title title={{title}}></app-sys-title>
+<div class="form-sys">
+  <div class="grid">
+    <div class="col-12">
+      <div class="field">
+        <label for="category">Categoria</label><br>
+        <input type="text" name="category" pInputText class="w-full border-round-lg" placeholder="Brinquedos" [(ngModel)]="category"/>
+      </div>
+    </div>
+
+    <div class="col-12">
+      <p-button label="SALVAR" styleClass="text-white w-full bg-send" [loading]="loading" (click)="submitData()"></p-button>
+    </div>
+  </div>
+</div>
+<p-toast position="bottom-right"></p-toast>

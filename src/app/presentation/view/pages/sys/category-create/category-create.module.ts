@@ -1,32 +1,28 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { LoginRoutingModule } from './login-routing.module';
-import { LoginComponent } from './login.component';
-import { SharedModule } from './../../../shared/shared.module';
-
-import { PasswordModule } from 'primeng/password';
-import { InputTextModule } from 'primeng/inputtext';
-
+import { CategoryCreateRoutingModule } from './category-create-routing.module';
+import { CategoryCreateComponent } from './category-create.component';
+import { SharedModule } from './../../../../shared/shared.module';
 import { FormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
 import { ToastModule } from 'primeng/toast';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { InputTextModule } from 'primeng/inputtext';
 
 @NgModule({
   declarations: [
-    LoginComponent
+    CategoryCreateComponent
   ],
   imports: [
     CommonModule,
-    LoginRoutingModule,
+    CategoryCreateRoutingModule,
     SharedModule,
-    InputTextModule,
     FormsModule,
-    PasswordModule,
     ButtonModule,
+    ToastModule,
     NoopAnimationsModule,
-    ToastModule 
+    InputTextModule
   ]
 })
-export class LoginModule { }
+export class CategoryCreateModule { }

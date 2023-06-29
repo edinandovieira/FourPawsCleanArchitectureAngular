@@ -24,4 +24,8 @@ export class ClientService {
   Get(id: string): Observable<any>{
     return this.http.get(`${baseUrl}v1/cliente/${id}`, {headers: this.header});
   }
+
+  Create(form: any): Observable<any>{
+    return this.http.post(`${baseUrl}v1/cliente`, form, {headers: this.header});
+  }
 }
