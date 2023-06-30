@@ -32,7 +32,7 @@
         </ng-template>
         <ng-template pTemplate="body" let-sale>
             <tr>
-                <td class="tl-td breed-xl"><img src="https://localhost:7038/v1/produto/avatar/{{sale.CodigoProduto}}" alt=""></td>
+                <td class="tl-td breed-xl"><img src="{{baseUrl}}v1/produto/avatar/{{sale.CodigoProduto}}" alt=""></td>
                 <td class="tl-td">{{sale.Produtos.Nome}}</td>
                 <td class="tl-td">{{sale.Quantidade}}</td>
                 <td class="tl-td">{{ sale.Produtos.Preco.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) }}</td>

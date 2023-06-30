@@ -1,3 +1,4 @@
+import { baseUrl } from '../../../../../../environments/environment';
 import { BreedService } from './../../../../../data/sys/breed.service';
 import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
 import { MessageService } from 'primeng/api';
@@ -39,7 +40,7 @@ export class BreedEditComponent implements OnInit {
       (response) => {
         this.statusOpt = this.breedService.GetStatus();
         this.breed = response;
-        this.breedImg = `https://localhost:7038/v1/raca/avatar/${this.id}?timestamp=${Date.now()}`;
+        this.breedImg = `${baseUrl}v1/raca/avatar/${this.id}?timestamp=${Date.now()}`;
       }
     );
   }

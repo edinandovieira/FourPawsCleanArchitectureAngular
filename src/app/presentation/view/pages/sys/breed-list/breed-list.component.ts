@@ -1,3 +1,4 @@
+import { baseUrl } from '../../../../../../environments/environment';
 import { Component, OnInit } from '@angular/core';
 import { BreedService } from 'src/app/data/sys/breed.service';
 import { Router } from '@angular/router';
@@ -10,6 +11,8 @@ import { MessageService } from 'primeng/api';
   providers: [MessageService]
 })
 export class BreedListComponent implements OnInit {
+  baseUrl = baseUrl;
+
   title = "Consultar Raça";
   breedFilter: any;
 

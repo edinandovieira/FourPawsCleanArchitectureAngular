@@ -13,7 +13,7 @@
     </ng-template>
     <ng-template pTemplate="body" let-productFilter>
         <tr>
-            <td class="breed-xl tl-td"><img src="https://localhost:7038/v1/produto/avatar/{{productFilter.codigo}}" class="p-avatar ml-3 mr-3" alt=""></td>
+            <td class="breed-xl tl-td"><img src="{{baseUrl}}v1/produto/avatar/{{productFilter.codigo}}" class="p-avatar ml-3 mr-3" alt=""></td>
             <td class="tl-td">{{ productFilter.codigo }}</td>
             <td class="tl-td">{{ productFilter.nome }}</td>
             <td class="tl-td">{{ productFilter.status }}</td>

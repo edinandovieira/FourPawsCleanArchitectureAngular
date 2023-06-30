@@ -1,3 +1,4 @@
+import { baseUrl } from '../../../../../environments/environment';
 import { BreedService } from './../../../../data/sys/breed.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -9,10 +10,11 @@ import { Component, OnInit } from '@angular/core';
 export class BreedComponent implements OnInit {
   breedFilter!: Record<string, any>;
 
+  baseUrl = baseUrl;
+
   constructor(
     private breedService:BreedService
   ){
-
   }
 
   ngOnInit(){

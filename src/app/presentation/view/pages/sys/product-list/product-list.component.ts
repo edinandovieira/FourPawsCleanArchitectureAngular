@@ -1,3 +1,4 @@
+import { baseUrl } from '../../../../../../environments/environment';
 import { ProductService } from './../../../../../data/sys/product.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
@@ -8,6 +9,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./product-list.component.scss']
 })
 export class ProductListComponent implements OnInit {
+  baseUrl = baseUrl;
+
   title = "Consultar Produtos"
   productFilter: any;
 

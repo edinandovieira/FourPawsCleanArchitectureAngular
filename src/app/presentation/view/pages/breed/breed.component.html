@@ -31,7 +31,7 @@
       <div class="card-container purple-container overflow-hidden">
         <div class="flex flex-auto">
           <div class="text-center breed-xl" *ngFor="let bv of breed.value">
-            <p><img src="https://localhost:7038/v1/raca/avatar/{{bv.codigo}}" class="p-avatar ml-3 mr-3" alt=""></p>
+            <p><img src="{{baseUrl}}v1/raca/avatar/{{bv.codigo}}" class="p-avatar ml-3 mr-3" alt=""></p>
             {{bv.nome}}
           </div>
         </div>

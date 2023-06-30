@@ -13,7 +13,7 @@
     </ng-template>
     <ng-template pTemplate="body" let-breedFilter let-i="rowIndex">
         <tr>
-            <td class="breed-xl tl-td"><img src="https://localhost:7038/v1/raca/avatar/{{breedFilter.codigo}}" class="p-avatar ml-3 mr-3" alt=""></td>
+            <td class="breed-xl tl-td"><img src="{{baseUrl}}v1/raca/avatar/{{breedFilter.codigo}}" class="p-avatar ml-3 mr-3" alt=""></td>
             <td class="tl-td">{{ breedFilter.codigo }}</td>
             <td class="tl-td">{{ breedFilter.nome }}</td>
             <td class="tl-td">{{ breedFilter.status }}</td>

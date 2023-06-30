@@ -1,3 +1,4 @@
+import { baseUrl } from '../../../../../../environments/environment';
 import { CategoryService } from './../../../../../data/sys/category.service';
 import { ProductService } from './../../../../../data/sys/product.service';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
@@ -48,7 +49,7 @@ export class ProductEditComponent implements OnInit {
       (response) => {
         this.statusOpt = this.productService.GetStatus();
         this.product = response;
-        this.productImg = `https://localhost:7038/v1/produto/avatar/${this.id}?timestamp=${Date.now()}`;
+        this.productImg = `${baseUrl}v1/produto/avatar/${this.id}?timestamp=${Date.now()}`;
       }
     );
   }
